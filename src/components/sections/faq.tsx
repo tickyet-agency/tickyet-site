@@ -65,7 +65,7 @@ export function FAQ() {
             duration: shouldReduceMotion ? 0 : 0.5,
             ease: [0.16, 1, 0.3, 1],
           }}
-          className="mx-auto mt-14 max-w-2xl rounded-2xl border border-border bg-white px-6 sm:px-8"
+          className="mx-auto mt-14 max-w-3xl rounded-2xl border border-border bg-white px-8 sm:px-10 py-4 shadow-card"
         >
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, i) => (

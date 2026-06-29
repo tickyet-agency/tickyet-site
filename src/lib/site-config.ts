@@ -21,28 +21,37 @@ export const siteConfig = {
     copyright: `© ${new Date().getFullYear()} TICKYET. All rights reserved.`,
     columns: [
       {
-        heading: "Services",
+        heading: "Quick Links",
         links: [
-          { label: "Meta & Google Ads", href: "#services" },
-          { label: "SEO", href: "#services" },
-          { label: "Web & Landing Pages", href: "#services" },
-          { label: "Lead Generation", href: "#services" },
+          { label: "About TICKYET", href: "#about" },
+          { label: "Our Process", href: "#process" },
+          { label: "Selected Work", href: "#work" },
+          { label: "Contact Us", href: "#contact" },
         ],
       },
       {
-        heading: "Company",
+        heading: "Services",
         links: [
-          { label: "Our Process", href: "#process" },
-          { label: "Philosophy", href: "#philosophy" },
+          { label: "Meta & Google Ads", href: "#services" },
+          { label: "SEO & Content", href: "#services" },
+          { label: "Web Development", href: "#services" },
+          { label: "Branding", href: "#services" },
+        ],
+      },
+      {
+        heading: "Resources",
+        links: [
+          { label: "Blog & Insights", href: "#insights" },
+          { label: "Case Studies", href: "#work" },
           { label: "FAQ", href: "#faq" },
         ],
       },
       {
         heading: "Connect",
         links: [
-          { label: "Book a Strategy Call", href: "https://wa.me/918374140801" },
-          { label: "Instagram", href: "#" },
           { label: "LinkedIn", href: "#" },
+          { label: "Instagram", href: "#" },
+          { label: "Twitter / X", href: "#" },
         ],
       },
     ],
@@ -51,7 +60,8 @@ export const siteConfig = {
 
 export const navLinks = [
   { label: "Services", href: "#services" },
+  { label: "Work", href: "#work" },
+  { label: "About", href: "#about" },
   { label: "Process", href: "#process" },
-  { label: "Philosophy", href: "#philosophy" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Insights", href: "#insights" },
 ];

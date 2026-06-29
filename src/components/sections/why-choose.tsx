@@ -86,18 +86,18 @@ export function WhyChoose() {
           initial={shouldReduceMotion ? "show" : "hidden"}
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="mt-14 grid grid-cols-1 gap-x-12 gap-y-10 md:grid-cols-2"
+          className="mt-16 grid grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-2 lg:gap-y-16 lg:gap-x-20"
         >
           {values.map(({ icon: Icon, title, description }) => (
-            <motion.div key={title} variants={item} className="flex items-start gap-4">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary/10 text-secondary">
-                <Icon className="h-5 w-5" />
+            <motion.div key={title} variants={item} className="group flex items-start gap-5">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-surface border border-border/60 text-primary shadow-sm transition-all duration-300 group-hover:bg-accent group-hover:text-primary group-hover:border-accent">
+                <Icon className="h-5 w-5 stroke-[1.5]" />
               </div>
               <div>
-                <h3 className="font-display text-base font-semibold text-secondary">
+                <h3 className="font-display text-lg font-semibold text-foreground transition-colors group-hover:text-primary">
                   {title}
                 </h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                <p className="mt-2 text-sm leading-relaxed text-muted">
                   {description}
                 </p>
               </div>

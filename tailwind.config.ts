@@ -12,20 +12,25 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#7ED321",
-          dark: "#68B01B",
-          light: "#EDFBDD",
+          DEFAULT: "#1E2228", // Charcoal
+          dark: "#14171B",
+          light: "#2C323A",
+        },
+        accent: {
+          DEFAULT: "#A3E635", // Lime Green
+          dark: "#84CC16",
+          light: "#BEF264",
         },
         secondary: {
-          DEFAULT: "#1F2937",
+          DEFAULT: "#374151",
         },
         background: "#FFFFFF",
-        surface: "#F8FAFC",
-        foreground: "#111827",
+        surface: "#F9FAFB",
+        foreground: "#0F172A",
         muted: {
-          DEFAULT: "#6B7280",
+          DEFAULT: "#64748B",
         },
-        border: "#E5E7EB",
+        border: "#E2E8F0",
       },
       fontFamily: {
         display: ["var(--font-geist-sans)", "Inter", "sans-serif"],
@@ -40,8 +45,9 @@ const config: Config = {
         content: "1280px",
       },
       boxShadow: {
-        premium: "0 20px 60px -15px rgba(31, 41, 55, 0.15)",
-        card: "0 8px 30px -8px rgba(17, 24, 39, 0.08)",
+        premium: "0 20px 40px -15px rgba(30, 34, 40, 0.15)",
+        card: "0 4px 20px -4px rgba(30, 34, 40, 0.08)",
+        hover: "0 12px 30px -8px rgba(30, 34, 40, 0.12)",
       },
       borderRadius: {
         xl2: "1.25rem",
@@ -55,10 +61,15 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)", opacity: "1" },
           to: { height: "0", opacity: "0" },
         },
+        "fade-in-up": {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.25s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in-up": "fade-in-up 0.5s ease-out forwards",
       },
     },
   },

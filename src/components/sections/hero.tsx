@@ -29,15 +29,15 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden pb-20 pt-36 md:pb-28 md:pt-44"
+      className="relative overflow-hidden pb-24 pt-40 md:pb-32 md:pt-48"
     >
       <div
         aria-hidden
-        className="absolute -right-32 -top-24 -z-10 h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-3xl"
+        className="absolute -right-32 -top-24 -z-10 h-[32rem] w-[32rem] rounded-full bg-accent/10 blur-3xl"
       />
       <div
         aria-hidden
-        className="absolute -bottom-40 -left-32 -z-10 h-[24rem] w-[24rem] rounded-full bg-secondary/5 blur-3xl"
+        className="absolute -bottom-40 -left-32 -z-10 h-[28rem] w-[28rem] rounded-full bg-primary/5 blur-3xl"
       />
 
       <div className="container grid grid-cols-1 items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">
@@ -49,24 +49,27 @@ export function Hero() {
         >
           <motion.span
             variants={item}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3.5 py-1.5 text-xs font-medium text-muted"
+            className="mb-8 inline-flex items-center gap-2 rounded-full border border-border/60 bg-surface px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted shadow-sm"
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            Performance-Driven Digital Growth Agency
+            <span className="h-2 w-2 rounded-full bg-accent" />
+            Performance-Driven Digital Growth
           </motion.span>
 
           <motion.h1
             variants={item}
-            className="font-display text-display-md font-semibold tracking-tight text-secondary sm:text-display-lg lg:text-display-xl"
+            className="font-display text-display-lg font-semibold tracking-tight text-foreground sm:text-display-xl"
           >
             Every Business Has a Goal.
             <br />
-            <span className="rounded-md bg-primary/25 px-1.5">Let&apos;s Tick It.</span>
+            <span className="relative inline-block mt-2">
+              <span className="relative z-10 text-primary px-2">Let&apos;s Tick It.</span>
+              <span className="absolute bottom-1 left-0 -z-10 h-3/5 w-full bg-accent/80 skew-x-[-12deg]" />
+            </span>
           </motion.h1>
 
           <motion.p
             variants={item}
-            className="mt-6 max-w-md text-balance text-base leading-relaxed text-muted sm:text-lg"
+            className="mt-8 max-w-lg text-balance text-lg leading-relaxed text-muted sm:text-xl"
           >
             TICKYET plans, launches, and scales Meta Ads, Google Ads, SEO,
             and web experiences — built around one thing: measurable
@@ -75,15 +78,15 @@ export function Hero() {
 
           <motion.div
             variants={item}
-            className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
+            className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center"
           >
-            <Button size="lg" asChild>
+            <Button size="lg" variant="accent" asChild>
               <a href={siteConfig.whatsapp} target="_blank" rel="noopener noreferrer">{siteConfig.ctaPrimary}</a>
             </Button>
-            <Button size="lg" variant="ghost" asChild>
+            <Button size="lg" variant="ghost" className="font-semibold" asChild>
               <a href="#services" className="group">
                 {siteConfig.ctaSecondary}
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
           </motion.div>

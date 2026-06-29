@@ -6,6 +6,7 @@ interface SectionHeadingProps {
   description?: string;
   align?: "left" | "center";
   chipClassName?: string;
+  className?: string;
 }
 
 export function SectionHeading({
@@ -14,20 +15,21 @@ export function SectionHeading({
   description,
   align = "center",
   chipClassName,
+  className,
 }: SectionHeadingProps) {
   return (
-    <div className={cn("max-w-2xl", align === "center" && "mx-auto text-center")}>
+    <div className={cn("max-w-2xl", align === "center" && "mx-auto text-center", className)}>
       <span
         className={cn(
-          "inline-flex items-center gap-2 rounded-full border border-border px-3.5 py-1.5 text-xs font-medium text-muted",
-          chipClassName ?? "bg-white"
+          "inline-flex items-center gap-2 rounded-full border border-border/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted shadow-sm",
+          chipClassName ?? "bg-surface"
         )}
       >
-        <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+        <span className="h-1.5 w-1.5 rounded-full bg-accent" />
         {eyebrow}
       </span>
 
-      <h2 className="mt-5 font-display text-display-md font-semibold tracking-tight text-secondary">
+      <h2 className="mt-6 font-display text-display-md font-semibold tracking-tight text-foreground sm:text-display-lg">
         {title}
       </h2>
 

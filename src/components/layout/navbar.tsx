@@ -75,7 +75,7 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-foreground/80 transition-colors duration-200 hover:text-secondary"
+              className="text-sm font-medium text-muted transition-colors duration-200 hover:text-primary"
             >
               {link.label}
             </a>
@@ -84,7 +84,7 @@ export function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:block">
-          <Button asChild>
+          <Button variant="accent" asChild>
             <a
               href={siteConfig.whatsapp}
               target="_blank"
@@ -101,7 +101,7 @@ export function Navbar() {
           aria-label={open ? "Close Menu" : "Open Menu"}
           aria-expanded={open}
           onClick={() => setOpen(!open)}
-          className="flex h-10 w-10 items-center justify-center rounded-full text-secondary transition-colors hover:bg-muted lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full text-foreground transition-colors hover:bg-surface lg:hidden"
         >
           {open ? (
             <X className="h-6 w-6" />
@@ -127,7 +127,7 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-3 text-sm font-medium text-foreground/80 transition-colors hover:bg-muted hover:text-secondary"
+                  className="rounded-lg px-3 py-3 text-sm font-medium text-muted transition-colors hover:bg-surface hover:text-primary"
                 >
                   {link.label}
                 </a>
